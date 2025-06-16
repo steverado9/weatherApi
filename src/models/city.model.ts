@@ -1,4 +1,5 @@
 import { Table, Model, Column, DataType, HasOne } from "sequelize-typescript";
+import Weather from "./weather.model";
 
 @Table({
     tableName: "cities"
@@ -19,4 +20,6 @@ export default class City extends Model {
     })
     name!: string
 
+    @HasOne(() => Weather)
+    weather!: Weather;
 }

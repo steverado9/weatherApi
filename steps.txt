@@ -15,4 +15,9 @@ to start your server,
 
 5)set up cors
 
-6)Set up your dataBase
+6)uncomments somethings in your tsconfig
+
+7)Set up your dataBase
+-Manually create the db name in your pgAdmin, so sequelize can connect to it
+
+8)steup your routes

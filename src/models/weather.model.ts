@@ -10,7 +10,7 @@ export default class Weather extends Model {
         type: DataType.INTEGER,
         primaryKey: true,
         autoIncrement: true,
-        field: "id",
+        field: "id"
     })
     id!: number
 
