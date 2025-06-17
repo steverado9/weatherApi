@@ -1,7 +1,6 @@
 import express, { Application } from "express";
 import dotenv from "dotenv";
 import Server from "./src/index";
-import Database from "./src/db";
 
 
 dotenv.config();
@@ -9,8 +8,6 @@ dotenv.config();
 const app: Application = express();
 
 const server: Server = new Server(app);
-
-const database: Database = new Database();
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 

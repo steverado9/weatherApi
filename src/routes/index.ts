@@ -1,8 +1,9 @@
 import { Application } from "express";
-import weatherRoutes from "./weather.routes";
+import cityRoute from "./city.route";
+
 
 export default class Routes {
     constructor(app: Application) {
-        app.use("/api/weather", weatherRoutes);
+        app.use(`/api/weather?city=`, cityRoute);
     }
 }
