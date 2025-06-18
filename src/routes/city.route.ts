@@ -1,12 +1,16 @@
 import { Router } from "express";
+import CityController from "../controllers/city.controller";
 
 class CityRoutes {
     router = Router();
+    cityController = new CityController();
 
-    constructor() {}
+    constructor() {
+        this.initializeRoutes();
+    }
 
     initializeRoutes() {
-        this.router.get(`xyz`,)
+        this.router.get("/", this.cityController.findCity);
     }
 }
 
